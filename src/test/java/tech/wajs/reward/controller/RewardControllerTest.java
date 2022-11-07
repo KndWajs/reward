@@ -101,7 +101,7 @@ class RewardControllerTest {
 
         //then
         assertThat(response.getStatus()).isEqualTo(expectedError.getResponseCode().value());
-        assertThat(response.getContentAsString()).isEqualTo(expectedError.getMessage());
+        assertThat(response.getContentAsString()).contains(expectedError.getMessage());
     }
 
     @Test
@@ -122,7 +122,7 @@ class RewardControllerTest {
 
         //then
         assertThat(response.getStatus()).isEqualTo(expectedError.getResponseCode().value());
-        assertThat(response.getContentAsString()).isEqualTo(expectedError.getMessage());
+        assertThat(response.getContentAsString()).contains(expectedError.getMessage());
     }
 
     @Test
@@ -143,7 +143,7 @@ class RewardControllerTest {
 
         //then
         assertThat(response.getStatus()).isEqualTo(expectedError.getResponseCode().value());
-        assertThat(response.getContentAsString()).isEqualTo(expectedError.getMessage());
+        assertThat(response.getContentAsString()).contains(expectedError.getMessage());
     }
 
     @Test
@@ -164,7 +164,7 @@ class RewardControllerTest {
 
         //then
         assertThat(response.getStatus()).isEqualTo(expectedError.getResponseCode().value());
-        assertThat(response.getContentAsString()).isEqualTo(expectedError.getMessage());
+        assertThat(response.getContentAsString()).contains(expectedError.getMessage());
     }
 
     @Test
@@ -181,7 +181,7 @@ class RewardControllerTest {
 
         //then
         assertThat(response.getStatus()).isEqualTo(RewardValidators.EMPTY_LIST.getResponseCode().value());
-        assertThat(response.getContentAsString()).isEqualTo(RewardValidators.EMPTY_LIST.getMessage());
+        assertThat(response.getContentAsString()).contains(RewardValidators.EMPTY_LIST.getMessage());
     }
 
     private TransactionDTO t(BigDecimal cost, ZonedDateTime time) {
