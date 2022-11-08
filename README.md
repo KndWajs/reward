@@ -7,7 +7,6 @@
 ```bash
 gradle bootRun
 ```
-- Or run Java with profile dev.
 - By default, back-end use port 8088
 - Java 17
 
